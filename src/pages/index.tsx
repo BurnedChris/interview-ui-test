@@ -1,6 +1,6 @@
-import Form from "interview/components/Form";
-import LinkNavigation from "interview/components/LinkNavigation";
-import Layout from "interview/components/layout";
+import Form from "../components/Form";
+import LinkNavigation from "../components/LinkNavigation";
+import Layout from "../components/layout";
 
 export default function Index() {
   return (
