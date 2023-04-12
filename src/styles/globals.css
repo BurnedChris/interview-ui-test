@@ -2,26 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+html:not(.light):not(.dark),
+.light {
+  --bg-accessability: #009681;
+  --bg-primary: #f9fafb;
+  --bg-secondary: #f1f5f9;
+  --text-accessability: #fff;
+  --text-primary: #475569;
+  --text-secondary: #1e293b;
+  --color-primary: #475569;
+  --divide-nordTest: #e4e7eb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.dark {
+  --bg-accessability: #009681;
+  --bg-primary: #3b4252;
+  --bg-secondary: #1e293b;
+  --text-accessability: #fff;
+  --text-primary: #ffffff;
+  --text-secondary: #cbd5e1;
+  --color-primary: #ffffff;
+  --divide-nordTest: #2e3440;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-primary text-primary;
+}
+
+.dark .error-page {
+  @apply text-black;
 }
